@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080a0d" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 57 18v28L32 60 7 46V18Z' fill='%23072357' stroke='%239dcaff' stroke-width='4'/%3E%3C/svg%3E" />
+    <title>Badge Tech — 光与材质实验</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="./" aria-label="Badge Tech 首页"><span class="logo">⬡</span> BADGE TECH<span class="edition">/ 001</span></a>
+      <span class="live"><i></i> REALTIME MATERIAL STUDY</span>
+    </header>
+    <main>
+      <div class="intro"><span class="eyebrow">光 · 材质 · 层次</span><h1>不止于表面。</h1><p>一枚徽章，五层光的实验。</p></div>
+      <div id="stage">
+        <canvas id="canvas" aria-label="实时三维蓝色六边形徽章，移动鼠标旋转，悬停展开五层材质" tabindex="0"></canvas>
+        <div id="error" role="alert" hidden></div>
+        <div class="specimen"><span>SPECIMEN 001</span><span>COBALT / IRIDESCENT</span></div>
+        <div class="layer-key" aria-label="徽章材质层">
+          <span><b>01</b> CRYSTAL <em>晶体保护层</em></span>
+          <span><b>02</b> SILVER <em>金属线框</em></span>
+          <span><b>03</b> HOLO FOIL <em>全息箔膜</em></span>
+          <span><b>04</b> ENAMEL <em>蓝色珐琅</em></span>
+          <span><b>05</b> FOUNDATION <em>金属底板</em></span>
+        </div>
+        <div class="hint" id="hint"><span class="hint-icon">↗</span><span class="mouse-hint">悬停展开 · 移动鼠标探索光泽</span><span class="touch-hint">轻触徽章展开 · 滑动下方调整层间距</span></div>
+      </div>
+      <div class="controls">
+        <button id="explode" type="button" aria-pressed="false"><span>▱</span> 展开图层</button>
+        <div class="separator"></div>
+        <label class="range-label" for="separation">层间距</label><input id="separation" type="range" min="0" max="100" value="0" aria-label="图层展开程度" /><output id="amount" for="separation">0%</output>
+        <div class="separator"></div>
+        <button id="motion" class="icon-button" type="button" aria-pressed="false" title="暂停自动光效">Ⅱ</button>
+        <button id="reset" class="icon-button" type="button" title="重置视角与图层" aria-label="重置视角与图层">↺</button>
+      </div>
+    </main>
+    <footer><span>EXPLORATIONS IN LIGHT & FORM</span><a href="https://x.com/Jaenam97/status/2104201809132990900" target="_blank" rel="noopener noreferrer">INSPIRED BY JAENAM97 <span>↗</span></a></footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
